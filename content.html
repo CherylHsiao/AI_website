@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Generated Art Showcase</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page1/background.webp');
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent white for the header */
+    margin-bottom: 30px; /* Space between header and content */
+}
+
+video {
+    width: 100%;
+    max-width: 600px; /* Limit the size of the video */
+    height: auto;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 300px; /* Limit the size of the image */
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Makes the image round */
+}
+.Mfloating-box {
+    background-color: #FFF0F5; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.info-container {
+    flex-grow: 1;
+}
+
+audio {
+    margin-left: 20px;
+}
+
+.painting-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.painting-item {
+    flex: 1; 
+    margin: 10px; 
+    text-align: center; 
+}
+
+.painting-item img {
+    width: 100%; 
+    max-width: 350px;
+    height: auto; 
+}
+
+.video-container {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+.video-title {
+    font-size: larger; /* Makes the font larger */
+    font-weight: bold; /* Makes the font bold */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    display: inline-block; /* Aligns the text next to the video */
+    margin-left: 15px; /* Adds space between the video and the title */
+}
+
+.video-container:hover .video-title {
+    transform: translateY(-5px); /* Moves the title up slightly when the container is hovered */
+}
+
+.video-container video {
+    max-width: 50%; 
+    margin-right: 20px; 
+}
+.video-container h3 {
+    font-size: 20px; 
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+.video-container p {
+    font-size: 16px; 
+    margin-top: 0; 
+}
+
+.poetry-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+.Pfloating-box {
+    flex: 1;
+    margin: 10px; 
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s; 
+}
+
+.Pfloating-box:hover {
+    transform: translateY(-10px); 
+}
+
+
+
+
+.section {
+    margin-top: 50px; /* Adds space between the logo and the first section */
+    background-color: rgba(0, 0, 0, 0.1); /* Example for more transparency, adjust as needed */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); /* Floating effect */
+    padding: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+#music { background-color: rgba(240, 228, 215, 0.5); } /* Adjust the alpha for transparency */
+#painting { background-color: rgba(216, 226, 220, 0.5); }
+#visual-effects { background-color: rgba(255, 229, 217, 0.5); }
+#poetry { background-color: rgba(201, 201, 255, 0.5); }
+
+
+.item-title {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.floating-box {
+    border: 2px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    background-color: hsla(289, 56%, 74%, 0.867);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px); /* Moves button up slightly on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover for more depth */
+}
+
+.button-container {
+    text-align: center;
+}
+
+</style>
+</head>
+<header>
+    <div class="logo-container">
+      <img src="/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page1/logo.webp" alt="Logo" class="logo">
+    </div>
+  </header>
+<body>
+
+    <div class="section" id="music" style="background-image:url('music_bg.jpg');">
+        <h2>Music</h2>
+        <div class="Mfloating-box">
+            <div class="info-container">
+                <div class="item-title">Downtown Dusk: A Lo-Fi Journey</div>
+                <p>Immerse yourself in the soothing beats of 'Downtown Dusk: A Lo-Fi Journey.</p>
+                
+            </div>
+            <audio controls>
+                <source src="/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page2/Music/Lo-Fi.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="Mfloating-box">
+            <div class="info-container">
+                <div class="item-title">Whispers of the Ivory: Solo Piano Reflections</div>
+                <p>A soul-stirring collection of piano melodies that resonate with the heart's deepest emotions.</p>
+            </div>
+            <audio controls>
+                <source src="/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page2/Music/Piano.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    
+    
+    
+    <div class="section" id="painting" style="background-image:url('painting_bg.jpg');">
+        <h2>Painting</h2>
+        <div class="painting-container">
+            <div class="painting-item">
+                <p style="font-size: large; font-weight: bold;">Nature's Circuitry</p>
+                <img src="/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page2/painting/painting1 .webp" alt="Painting 1">
+            </div>
+            <div class="painting-item">
+                <p style="font-size: large; font-weight: bold;">Urban Oasis</p>
+                <img src="/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page2/painting/painting2 .webp" alt="Painting 2">
+            </div>
+            <div class="painting-item">
+                <p style="font-size: large; font-weight: bold;">Celestial Voyage</p>
+                <img src="/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page2/painting/painting3.webp" alt="Painting 3">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="section" id="visual-effects" style="background-image:url('visual_effects_bg.jpg');">
+        <h2>Visual Effects and Animation</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page2/video/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-info">
+                <h3>Futuristic Cityscape</h3>
+                <p>Explore a city of tomorrow, where technology and architecture merge in a symphony of progress.</p>
+            </div>
+            
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="/Users/cheryl/Desktop/UW/Winter/MSIS 547/assignment 1/Question 1/assets/page2/video/video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-info">
+                <h3>Underwater Expedition</h3> 
+                <p class="video-description">Dive into the depths of the ocean and uncover the mysteries that lie beneath the waves.</p>
+            </div>
+   
+    </div>
+    
+    <div class="section" id="poetry" style="background-image:url('poetry_bg.jpg');">
+        <h2>Poetry</h2>
+        <div class="poetry-container">
+            <div class="Pfloating-box">
+                <p>In the silent march of time, a whisper through the ages,
+                    A relentless force, unseen, turning countless pages.
+                    It weaves through nature's tapestry, in subtle, graceful strides,
+                    Marking each moment's passing, where mystery abides.</p>
+                <p>The changing seasons echo time's unyielding decree,
+                    From the bloom of spring's first flower to the fall of the last leaf.
+                    A cycle of renewal, of life, and tender farewells,
+                    In every leaf a story, in every bloom, a tale it tells.</p>
+                <p>Human hearts, too, feel the weight of time's silent song,
+                    Emotions ebb and flow, as days and years march along.
+                    Joy and sorrow intertwined, in love's delicate embrace,
+                    Each memory a footprint, time's indelible trace.</p>
+                <p>Artifacts we leave behind, whispers of our essence,
+                    Monuments to moments lived, in vivid quintessence.
+                    From stone and canvas, word and sound, our legacy takes shape,
+                    A testament to what was loved, to what we dared to make.</p>
+                <p>Amidst the fleeting moments, against eternity's vast expanse,
+                    We dance the timeless dance of day and night, in a delicate balance.
+                    For though time may take its toll, and seasons come and go,
+                    The beauty of the moment lives on, in the heart's eternal glow.</p>
+                <p>So let us cherish every second, every minute's fleeting breath,
+                    For in the passage of time, there's beauty, even in death.
+                    As the world turns beneath the stars, in the silent, endless night,
+                    We are part of something greater, in the dance of shadow and light.</p>
+            </div>
+            <div class="Pfloating-box">
+                <p>Beyond the bounds of Earth's embrace, where dreams and darkness intertwine,
+                    A vast and endless cosmos spreads, a tapestry by design.
+                    With every star that flickers bright, and galaxies in endless swirl,
+                    The universe unveils itself, each mystery to unfurl.</p>
+                <p>Amidst this vast expanse we stand, small specks in an infinite dance,
+                    Gazing up in wonderment, seized by cosmic trance.
+                    The night sky, a canvas vast, with dots of light that seem to sing,
+                    Whispers tales of distant worlds, and the awe they bring.</p>
+                <p>Planets in their silent orbit, galaxies in graceful spin,
+                    Black holes weaving through the dark, where stars once burned within.
+                    Nebulae, in hues of fire, cradle stars in their birth,
+                    Crafting light from cosmic dust, the artistry of the universe.</p>
+                <p>The quest for knowledge drives us forth, beyond our earthly shore,
+                    To decipher the ancient lights, and what they have in store.
+                    Each discovery a step closer, to understanding our cosmic tale,
+                    In this boundless sea of stars, where human curiosity sets sail.</p>
+                <p>We long to find our place among the constellations bright,
+                    To understand our part within the endless night.
+                    Are we alone in this vastness, or is life a common thread?
+                    The universe keeps its secrets, in the silence vast and spread.</p>
+                <p>Yet, in this quest, we find our spirit, our resolve to explore,
+                    Pushing past our limits, always seeking more.
+                    For in the beauty of the cosmos, in its mystery and its grace,
+                    Lies the quest for our own origins, our cosmic trace.</p>
+                <p>So let us journey forth, with eyes wide to the skies,
+                    Where galaxies and stars await, to unveil their ancient guise.
+                    For in the cosmos vast and wide, with its beauty and its scars,
+                    We find a reflection of ourselves, among the infinite stars.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="button-container">
+        <a href="index.html" class="btn">Back to Landing Page</a>
+    </div>
+    
+
+</body>
+</html>
